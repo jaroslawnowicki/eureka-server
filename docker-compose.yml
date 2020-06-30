@@ -1,0 +1,16 @@
+version: '2'
+services:
+  eurekaserver:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: eureka-server
+    ports:
+      - 9999:9999
+    networks:
+      - network1
+    environment:
+      - SPRING_PROFILES_ACTIVE=production
+
+networks:
+  network1:
