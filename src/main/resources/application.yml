@@ -1,0 +1,18 @@
+logging:
+  level:
+    org:
+      springframework: DEBUG
+
+server:
+  port: 9999
+
+spring:
+  application:
+    name: eureka-server-service
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:9999/eureka
